@@ -1,1 +1,316 @@
+--------------------hello world program----------------------------------
+
+console.log("hello world"); // console.log can print something on console
+console.log(`hello world`); 
+
+---------------------variables-----------------------------------------
+
+variables can store some information
+also we can use that information later 
+and we can change that information later also!!
+
+var firstName = "Ashish" // decalre variable also the name of the variable is case-sensitive
+console.log(firstName); // -----> Ashish
+console.log(firstname); // error
+
+rules for naming variables
+1. can not start with number---> 1value ----->invalid     value1---> valid
+2.can  use underscore_ or dollar symbol $ ------> valid: _firstname or $firstname
+3. can not use space ---> first name ----invalid
+
+---------------------let keyword---------------------
+it also declare variable
+variable means value where we can change the values
+let firstname = "Ashish" 
+let firstname = "Duhan"   // error firtname alredy been declare
+
+let firstname = "Ashish"
+firstname = "Duhan"
+console.log(firstname) // output---> Duhan
+
+---------------------const keyword----------------------
+
+that keyword where we can not change the values
+
+const X = 12;
+console.log(X) // output: 12
+console.log(X**2) // output: 24
+ if we change the const variable X=19
+ then, 
+ console.log(X) // error to const declare
+ 
+ -------------string indexing-----------------------
+ 
+ let firstname = "Ashish"  // index A s h i s h : 0 1 2 3 4 5 
+ console.log(firstname[3]) // output: i 
+ // always use squre brackets [] to check the string indexing number index strats from zero
+ 
+ ------------------lenght of string--------------
+ 
+ let firstname = "Ashish"
+ console.log(firstname.lenght); // 6 lenght starts from 1
+ 
+ ------------------last index-------------------
+ 
+ let firstname = "Ashish Duhan"
+console.log(firstname[firstname.length-1]; // output n 
+
+
+------------------methods of string--------------------
+
+1. trim()  // usefull for removing spaces
+
+let firstname = "  Ashish  "
+console.log(firstname.lenght) // 10
+let newString = firstname.trim();
+console.log(newString) // Ashish
+console.lenght(newString.trim) // 6
+
+2. toUpperCase()
+
+let firstname = "ashishduhan"
+firstname = firstname.toUpperCase();
+console.log(firstname) // ASHISHDUHAN
+
+3. toLowerCase()
+
+let firstname = AshiSh
+firstname = firstname.toLowerCase()
+console.log("firstname") // ashish
+
+4. slice() // two main reasons : start index or end index
+
+ashish 
+012345
+
+let firstname = "ashish" // we need ash
+firstname = firstname.slice(0,3) // start index = 0 and end index = 3 but not included index no. 3
+console.log(firstname) // ash
+(note): firstname = firstname.slice(1);
+console.log(firstname) // shish 
+
+-----------------------typeof Opretaor---------------------
+
+let age = 50;
+console.log(typeof age) // numbers
+
+let firstname = "ashish"
+console.log(typeof firstname); // strings
+
+
+----------------convert number to string-------------------
+
+let age = 90;
+age = age + ""; // 90 --> "90"
+console.log(typeof (age)); // string
+ 
+ 
+ -------------------convert string to number---------------------
+ 
+ let myStr = "90"; -------> +"90"
+ console.log(typeof myStr) // number
+ 
+ (*note)
+let age = 18;                                  |    let age = "18";
+age = String(age);                             |    age = Number(age);
+console.log(typeof age); // number             |    console.log(typeof age);  // string
+ 
+ ---------------- string concatenation---------------
+ 
+ let str1 = "Ashish"
+ let str2 = "Duhan"
+ let fullname = str1 + str2;  // AshishDuhan
+                str1 + " " + str2; // Ashish Duhan
+ console.log(fullname);
+                
+  let str1 = "10";
+  let str2 = "8";
+  let newstr = str1 + str2;
+  console.log(newstr) // 108
+  
+  convert string to number
+  let newstr = +str1 + +str2;
+  console.log(newstr) // 18
+  
+  ---------------template string--------------
+  
+  let age = 27;
+  let name = "Ashish"
+let aboutMe = `my name is ${name} and my age is ${age}`;
+console.log("aboutMe")  // my name is Ashish and my age is 27
+  
+  
+----------------undefined--------------
+let name;
+console.log(typeof name)  // undefined
+  
+------------- booleans ---------------
+
+true or false are two conditions/values of booleans
+
+let num1 = 10;
+let num2 = 10;
+
+console.log(num1>=num2) // true  
+
+let num1 = 10;
+let num2 = 11;
+console.log(num1>num2) // false  num1 is not greater than num2
+
+let num1 = 10;
+let num2 = 1;
+console.log(num1>num2) // true  num1 is greater than num2
+
+---------  == vs === ------------------
+
+  == : check the values not data type
+  
+  let num1 = "9";
+  let num2 = 9;
+  console.log(num1 == num2); // true
+  let num1 = "0";
+  let num2 = 9;
+  console.log(num1 == num2); // false
+  
+  === : to check values and data type
+  
+  let num1 = "9";
+  let num2 = 9;
+  console.log(num1 === num2); // false
+  
+  
+  ---------------- != vs !== ----------------
+  
+  let num1 = 9;
+  let num2 = 9;
+  console.log(num1 != num2); // false    != means not equal to
+  
+    
+   let num1 = "9";
+  let num2 = 9;
+  console.log(num1 !== num2); // true    !== means to check the value and data type
+  
+  
+  --------------------- if else ---------------------
+  
+  let age = 11;    
+  if(age>10)    // if age is greater than 10 then print hello
+  {
+  console.log("hello")    
+  }
+  
+  let age = 10;    
+  if(age>=10)    // if age is greater than and equal to  10 then print hello
+  {
+  console.log("hello")    
+  }
+  
+  let age = 11;    
+  if(age>10)    // if age is greater than 10 then print hello otherwise else loop run
+  {
+  console.log("hello")    
+  }
+  else
+  {
+  console.log("world")
+  }
+  
+  
+  let num = 10;
+  if(num%2 === 0)  // remainder : even 
+  {
+  console.log("even")            --------------------> output : even
+  }
+  else
+  {
+  console.log("odd")
+  }
+  
+  
+  ---------------- falsy value --------------------
+  1. false
+  2. ""
+  3. null
+  4. undefined
+  5. 0
+  
+  let firstname = "" // false // null // undefined // 0
+  if(firstname)
+  {
+  console.log(firstname);
+  }
+  else{
+  console.log("false")                  -----------------> output : false
+  }
+  
+  
+  
+  ---------------- truthy value --------------------
+  
+ 1. "XYZ"
+ 2. 1 or -1
+ 
+ let firstname = "ashish" // 1 // -1
+ if(firstname)
+ {
+ console.log("firstname")                ---------------> output : ashish
+ }else
+ {
+ console.log("false")
+ }
+  
+----------------------------- ternary operator/conditional------------------------
+
+let age = 15;
+let drink;
+if(age>=19){
+console.log("coffee");
+}else{
+console.log("milk");
+}
+console.log("drink");  ---------> milk
+
+to avoid this type coding we will use ternary or conditional opertors
+
+let age = 10;
+let drink = age >= 5 ? "beer" : "khamba";    // age is greater than and equal to 5
+console.log(drink)
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
