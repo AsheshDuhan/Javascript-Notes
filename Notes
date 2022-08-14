@@ -427,12 +427,92 @@ do{
   i++                        // first do condition is started
 }while(i<=10);
 
+__________________________________________ Array _______________________________________
+collection of elements
+
+let fruits = ["Apple", "Grapes", "Oranges", "Mangos"];
+console.log(fruits)  // to check the Array
+
+// to check the index of the elements
+console.log(fruits[0]);
+
+let numbers = [1,2,3,4,9]
+console.log(numbers)
+console.log(numbers[3]) // [] brackets denots the index values
+
+// we can store the differents types of elements in an Array
+let mix = ["Ashish", "QA", 1,3,9.09, null, undefined]
+console.log(mix)
+
+**** JS takes an array as an object so we use Array.isArray where it can shows the array in boolean form which is true or false*********
+let mix = ["Ashish", "QA", 1,3,9.09, null, undefined]
+let obj = {}
+console.log(typeof mix, typeof obj) // object, object
+
+let mix = ["Ashish", "QA", 1,3,9.09, null, undefined]
+console.log(Array.isArray(mix))    // true
+
+let obj = {}
+console.log(Array.isArray(obj)) // false
+
+----------------------------- methods of Array-------------------------------
+1.Push
+2.Pop
+3.Shift
+4.Unshift
+
+let fruits = ["Apple", "Grapes", "Oranges", "Mangos"]
+fruits.push("banana")   // push method will change the current array index
+console.log(fruits)
 
 
+let fruits = ["Apple", "Grapes", "Oranges", "Mangos"]
+fruits.pop()   // pop always remove the last elements of the array
+console.log(fruits)
+
+let car = ["suzuki", "volvo", "tata"]
+let poppedCar = car.pop();
+console.log("poppedCar is", poppedCar);   // pop will return the value
+
+// unshift will add the element in the starting of an array
+let car = ["suzuki", "volvo", "tata"]
+car.unshift("Mahindra");
+car.unshift("Hyundai")
+console.log(car)
+console.log(car[0]) // at 0 index is Hyundai
+
+// shift will remove the element in the starting of an array
+let car = ["suzuki", "volvo", "tata"]
+car.shift()
+console.log(car)  // [ 'volvo', 'tata' ]
+console.log(car[0]) // at 0 index is volvo
+
+--------------------------------------------------- primitive data type--------------------------------------------------
+// primitive data type 
+let num1 = 9;
+let num2 = num1;
+console.log("the value of num1 is", num1);                              output : 9, 9, 10, 9
+console.log("the value of num2 is", num2);
+
+// increment of value num1
+
+num1++;
+console.log("the value of num1 is", num1);
+console.log("the value of num2 is", num2);
 
 
+--------------------------------------- Reference data Type -------------------------------
+// reference data type
 
+let array1 = ["index1", "index2"];
+let array2 = array1;
+console.log("array1", array1)
+console.log("array2", array2)                                      
+// add new elements in an array                              //output: ["index1", "index2"] after push the element : [ 'index1', 'index2', 'index3' ]
 
+array1.push("index3");
+console.log("array1", array1);
+console.log("array2", array2)
 
 
 
