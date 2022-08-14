@@ -276,11 +276,82 @@ let age = 10;
 let drink = age >= 5 ? "beer" : "khamba";    // age is greater than and equal to 5
 console.log(drink)
 
+-------------------------------and(&&) or(||) operator --------------------------
 
-  
-  
-  
-  
+let firstname = "ASHISH"
+let age = 26;
+if(firstname[0] === "A")
+{ 
+ console.log("your name starts with "A")    -------------> output: your name starts with "A"     1. condition
+}
+
+if(age >= 28)
+{
+ console.log("your age is above "26")   --------------------> output : your age is above "26"     2. condition
+}
+
+now to rewright these two conditions in one line we should use the &&(and) operators 
+
+let firstname = "Duhan";
+let age = 28;
+
+if( firstname[1] === "u" && age < 20)
+{
+ console.log("Pass")
+}
+else{                                   --------- output : pass the second condition i.e. "Fail"
+console.log("Fail")
+}
+
+
+|| (or) operator
+let firstname = "Duhan";
+let age = 28;
+
+if(firstname[2] === "h"  || age < 20)
+{
+  console.log("Pass");                    ---------> ouput: one condition is true so the condition first will be declare
+}
+else{
+  console.log("Fail");
+}
+
+------------------------ nested if else --------------------
+let WinnigNumber = 100;
+let userGuess = +prompt("Enter your number");    ----------> prompt take the number as string so to convert the string into number add '+' as prefix
+// console.log(typeof userGuess, userGuess);
+
+if(userGuess < WinnigNumber){
+    console.log("Your number is too LOW")
+}else{
+    if(userGuess === WinnigNumber)
+    {
+        console.log("Winner")
+    }else{
+        console.log("Too HIGH")
+    }
+}
+
+---------------------------------------------------------------------------
+if
+else if                    --------------------- conditions
+else if
+else if
+else
+
+let temp = -90;
+if(temp > 40){
+    console.log("too high")
+}else if(temp > 30){
+    console.log("Lets go outside")
+}else if(temp < 0){
+    console.log("weather is cool")
+}else if(temp >= 10){
+    console.log("very cold");
+}else {
+    console.log("Extremely cold")
+}
+
   
   
   
