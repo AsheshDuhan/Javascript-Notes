@@ -352,17 +352,80 @@ if(temp > 40){
     console.log("Extremely cold")
 }
 
+----------------------------------------- switch statement----------------------------
+let day = 9;
+switch(day){
+  case 0: 
+    console.log("sunday")
+    break;
+  case 1:
+    console.log("monday")
+    break;
+  case 3:
+    console.log("Tuesday")
+    break;
+    
+  default:
+  console.log("Invalid")
+}
+----------------------------------------- while loop----------------------
+
+let i = 0;
+while(i<=3){
+  console.log(i);
+  i++;
+}
+console.log(`the current value of i is ${i}`) // 4
+
+print sum of natural no. of 10  // 1+2+3+4.....+10
+let num = 10;// comment
+let total = 0;  // total + 1, total + 2................(0+1=2.................)
+let i = 0;
+while(i<=10){
+  total = total + i;
+  i++;
+}
+console.log(total) // 55
   
   
-  
-  
-  
-  
-  
-  
+-------------------------------------- for loop ---------------------------  
+ 
+ for(let i = 0; i<10; i++){
+  console.log(i);                     // when we take let variable the output not defined the value of i
+}                                     // but we take the var value then i should be declare 
+*** console.log(i) ***** 
+//sum of 10 natural Number
+
+let total = 0;
+let num = 10;
+for(let i = 0; i<=num; i++){
+  total = total + i;
+}
+console.log(total) // 55
+
+------------------------------ break keyword ---------------
+for(let i =0; i<=10; i++){
+  if(i===4){
+    break;
+  }
+  console.log(i)                    // 0,1,2,3
+}
+------------------------------- continue keyword ---------------------
+for(let i =0; i<=10; i++){
+  if(i===4){
+    continue;
+  }
+  console.log(i)            // 0,1,2,3,5,6,7,8,9,10                // skip the the number which is fullfilled their conditions
+}
   
 
-
+--------------------------------- do while loop ----------------
+run atleast once whenever there condition is false
+let i = 90;
+do{
+  console.log(i);
+  i++                        // first do condition is started
+}while(i<=10);
 
 
 
