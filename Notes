@@ -514,17 +514,128 @@ array1.push("index3");
 console.log("array1", array1);
 console.log("array2", array2)
 
+---------------------------- how to clone array -------------------------------
 
+let array1 = [1,2,3,4,5]
+let array2 = array1.slice(0); // using slice
+let array2 = [].concat(array1) // using concat
+array1.push(6);
+console.log(array1 === array2);
+console.log(array1);
+console.log(array2);
 
+let array1 = [1,2,3,4,5]
+// spread opreator ...
+let array2 = [...array1]
+array1.push(6);
+console.log(array1 === array2);
+console.log(array1);
+console.log(array2);
 
+*** adding array *****
+let array1 = [1,2,3,4]
+let array2 = [...array1].concat([5,6]);
+let array3 = array2.slice(0).concat([7,8,])
+console.log(array1===array2 || array2 === array3)
+console.log(array1);
+console.log(array2);
+console.log(array3);
 
+*****
+let array1 = [1,2,3,4]
+let array2 = [...array1].concat([5,6]);
+let array3 = array2.slice(0).concat([7,8,])
+let newArray = [...array1, ...array2, ...array3]
 
+console.log(newArray)
 
+---------------------------------------------------- for loop in Array -------------------
 
+let cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA"]
+console.log(cars.length)
+console.log(cars[3]) // at 3rd index : HYUNDAI
 
+//last element
+console.log(cars[cars.length-1]) // KIA
 
+for(let i=0; i<cars.length; i++){
+  console.log(cars[i].toLowerCase())
+}
+-------------------------------------------------------------------------------------------------------------------------
+let cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA"]
+// put at this new Array
+let carsBrand = [];
+for(let i=0; i<cars.length; i++){
+  carsBrand.push(cars[i].toLowerCase())
+}
+console.log(carsBrand)  // [ 'tata', 'suzuki', 'mahindra', 'hyundai', 'kia' ]
 
+-------------------------------------------------Const for creating an Array----------------------------------
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA"]
+cars.push("Ford"); 
+console.log(cars) // [ 'TATA', 'SUZUKI', 'MAHINDRA', 'HYUNDAI', 'KIA', 'Ford' ]
+cars.pop();
+console.log(cars)  //[ 'TATA', 'SUZUKI', 'MAHINDRA', 'HYUNDAI', 'KIA' ]
 
+------------------------------------------------------------ While Loop in an array -----------------------------------
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA"]
+// console.log(cars.length)
+const carsbrand = []
+let i = 0;
+while(i<cars.length){
+  carsbrand.push(cars[i].toLowerCase())
+  i++;
+}
+console.log(carsbrand)
+--------------------------------------------------------------------------------------------------
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA"]
 
+// console.log(cars.length)
+// const carsbrand = []
+let i = 0;
+while(i<cars.length){
+  console.log(cars[i].toLowerCase())
+  i++;
+}
+// console.log(carsbrand)
+------------------------------------------------------ for of loop in an array ------------------------------------------
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA", "Ford"]
 
+for(let brand of cars){
+  console.log(brand)
+}
 
+************************
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA", "Ford"]
+const carbrand = []
+for(let brand of cars){
+  
+  carbrand.push(brand.toLowerCase())
+}
+ console.log(carbrand)
+ 
+ *****************************************************
+ 
+ ------------------------------- for in loop ------------------------------
+ It shows the index of an array
+ 
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA", "Ford"]
+
+for(let brand in cars){
+  console.log(brand)         // 0,1,2,3,4,5
+}
+*********************************************************
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA", "Ford"]
+
+for(let brand in cars){
+  console.log(cars[brand])   // showing the elements of an array
+}
+**************************************************************
+const cars = ["TATA", "SUZUKI", "MAHINDRA", "HYUNDAI", "KIA", "Ford"]
+
+const carbrand = [];
+
+for(let brand in cars){
+  carbrand.push(cars[brand].toLowerCase())
+}
+console.log(carbrand)
