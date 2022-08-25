@@ -639,3 +639,123 @@ for(let brand in cars){
   carbrand.push(cars[brand].toLowerCase())
 }
 console.log(carbrand)
+------------------------------------------------------------------------------------------------------------
+-----------------------------------OBJECT---------------------------------------------
+Object = {}    It is a reference type
+It store key value pairs
+Objects dont have index
+const person = {name:"Ashish", age : 28}
+console.log(person)
+console.log(person.age)
+console.log(person.name)
+.
+.
+.
+.
+const person = {
+  name : 'Ashish',
+  age : 28,
+  hobbies:["sleeping", "Traveling", "Eating"]
+}
+
+// console.log(person)
+console.log(person.hobbies)
+.
+.
+.
+
+const person = {
+  name : 'Ashish',
+  age : 28,
+  hobbies:["sleeping", "Traveling", "Eating"]
+}
+
+// console.log(person)
+console.log(person.hobbies)
+console.log(person["age"]) is equal to console.log(person.age)
+
+person.gender = 'male' -------------------------// How to add key value pair to objects
+console.log(person)
+
+
+---------------- difference b/w dot and bracket notation--------------------------
+const car = {
+  name : "TATA",
+  Price : "22 lakh",
+  "Brand Color" : ["Black", "White", "Red"]
+}
+
+console.log(car["Brand Color"])
+
+............................................
+adding key value in given objects
+const key = "Model"
+
+const car = {
+  name : "TATA",
+  Price : "22 lakh",
+  "Brand Color" : ["Black", "White", "Red"]
+}
+                                                                                                                                  
+// console.log(car["Brand Color"])
+car[key] = "Safari"
+car.key = "Safari"
+console.log(car)
+
+output : {
+  name: 'TATA',
+  Price: '22 lakh',
+  'Brand Color': [ 'Black', 'White', 'Red' ],
+  Model: 'Safari',
+  key: 'Safari'
+}
+-------------------------------------------------
+
+const person = {
+  name : "Ashish",
+  age : 28,
+  "person hobbies" : ["Sleeping", "Eating","Repeat"]
+}
+// for loop in Object
+
+for(let key in person){
+  // console.log(person.key)
+  // console.log(person[key])
+  // console.log(`${key} : ${person[key]}`)  // key value pair
+  console.log(key, ":", person[key])
+}
+
+------------------------------------ Object.Keys -----------------------------
+const person = {
+  name : "Ashish",
+  age : 28,
+  "person hobbies" : ["Sleeping", "Eating","Repeat"]
+}
+// Object.keys
+
+
+console.log(typeof Object.keys(person))
+
+const val = Array.isArray((Object.keys(person)))
+console.log(val)
+
+for(let key of Object.keys(person)){
+  console.log(person[key])
+}
+---------------------------------------------- computed properties -------------------------------------
+const Car1 = "TATA";
+const Car2 = "Mahindra";
+
+const Model1 = "Safari";
+const Model2 = "Xuv 700";
+
+// const Brand = {
+//   [Car1] : Model1,
+//   [Car2] : Model2
+// }
+
+const Brand = {}
+Brand[Car1] = Model1;
+Brand[Car2] = Model2;
+console.log(Brand)
+// console.log(Brand)
